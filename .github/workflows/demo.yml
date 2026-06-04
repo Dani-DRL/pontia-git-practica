@@ -1,0 +1,16 @@
+name: Demo Evaluacion Pontia Daniel
+
+on:
+  workflow_dispatch:
+    inputs:
+      mensaje:
+        description: 'Introduce un mensaje de texto'
+        required: true
+        type: string
+
+jobs:
+  imprimir:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Imprimir mensaje por consola
+        run: echo "${{ inputs.mensaje }}"
